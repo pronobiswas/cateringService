@@ -1,12 +1,12 @@
 import Banner from './_component/banner'
-import NewBanner from './_component/newbanner'
+import Ourstory from './_component/ourstory'
 
 export default function Home() {
   return (
     <div className="w-full h-full">
       <main className="w-full h-full">
         <Banner/>
-        <NewBanner/>
+        <Ourstory/>
       </main>
     </div>
   );

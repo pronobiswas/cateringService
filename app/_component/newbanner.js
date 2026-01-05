@@ -8,20 +8,19 @@ export default function Banner() {
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
 
-    // Mouse position relative to div
+
     const mouseX = e.clientX - rect.left;
     const mouseY = e.clientY - rect.top;
 
-    // Normalize to -1 … +1 range
     const normX = (mouseX - rect.width / 2) / (rect.width / 2);
     const normY = (mouseY - rect.height / 2) / (rect.height / 2);
 
-    // Scale to max 100px
+
     const maxMove = 50;
     const targetX = normX * maxMove;
     const targetY = normY * maxMove;
 
-    // Animate with GSAP
+
     gsap.to(imgRef.current, {
       x: targetX,
       y: targetY,

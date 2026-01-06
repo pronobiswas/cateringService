@@ -35,19 +35,7 @@ export default function Banner() {
         onMouseMove={handleMouseMove}
         className="w-full h-screen border-4 border-red-500 overflow-hidden"
       >
-        <div className="w-full h-full flex justify-between bg-[url('/slide01.jpg')]">
-          <aside className="w-2/8 h-full relative">
-            <img
-              src="/slide01-01.png"
-              className="w-full h-full object-contain"
-            />
-            <img
-              ref={imgRef}
-              src="/slide01-02.png"
-              className="w-1/2 h-full object-contain absolute -top-24 lg:-top-44 right-0"
-            />
-          </aside>
-        </div>
+        
       </div>
     </section>
   );

@@ -34,7 +34,19 @@ export default function Banner() {
       <section id="banner" ref={bannerRef}>
         <div onMouseMove={handleMouseMove} className='w-full h-screen border-4 overflow-hidden'>
           {/* ===wrapper=== */}
-          <div className='w-full h-full flex justify-between bg-[url("/slide01.jpg")] '>
+          <div 
+          style={{
+            backgroundImage: `
+              linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.1)
+              ),
+              url("/slide01.jpg")
+            `,
+            backgroundSize:'100% 100%',
+            backgroundPosition:'enter center'
+          }}
+          className='w-full h-full flex justify-between '>
             {/* ====aside==== */}
             <aside className='w-2/8 h-full relative'>
               <img
@@ -63,8 +75,8 @@ export default function Banner() {
             {/* ===centerdiv=== */}
             <div className='w-4/8 h-full flex items-center justify-center' >
               <div className='w-full h-96 absolute md:static text-white text-center z-50'>
-                <h2 className='text-3xl text-amber-500'>Discover</h2>
-                <h1 className='text-5xl'>Meal Deal</h1>
+                <h2 className='text-5xl text-amber-500 font-tangerine'> <b>Discover</b></h2>
+                <h1 className='text-7xl font-tangerine'>Meal Deal</h1>
                 {/* ----divider---- */}
                 <div className='w-full max-w-xl mx-auto flex items-center justify-baseline mt-5 mb-8'>
                   <div className='w-full flex flex-col gap-2 items-end'>

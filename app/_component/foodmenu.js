@@ -6,7 +6,7 @@ export default function Foodmenu() {
         <>
             <section id='foodMenu'>
                 {/* =====wrapper===== */}
-                <div className='w-full h-full flex justify-center items-center p-5' >
+                <div className='w-full h-full flex justify-center items-center p-5 py-12' >
                     <div className='w-full max-w-7xl h-full flex flex-col justify-center items-center gap-12 lg:flex-row'>
                         {/* ---ptoto galary---- */}
                         <div className='w-full lg:w-1/2 max-w-3xl h-full flex flex-wrap'>
@@ -62,7 +62,7 @@ export default function Foodmenu() {
                         <div className='w-full lg:w-1/2 max-w-3xl h-full'>
                             {/* ----heading---- */}
                             <div>
-                                <h3 className='text-2xl font-tangerine'>From the menu</h3>
+                                <h3 className='text-6xl font-tangerine text-amber-600'><b>From the menu</b></h3>
                                 <h2 className='text-4xl'>Special offers</h2>
                             </div>
                             {/* ----menu list---- */}

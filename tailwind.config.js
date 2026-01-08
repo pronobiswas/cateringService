@@ -5,12 +5,16 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    'font-tangerine',
+    'font-geist',
+    'font-geist-mono'
+  ],
   theme: {
     extend: {
       fontFamily: {
-        geist: ["var(--font-geist-sans)", "sans-serif"],
-        geistMono: ["var(--font-geist-mono)", "monospace"],
-        tangerine: ["var(--font-tangerine)", "cursive"],
+        'montesrrat': ["var(--font-montesrrat)", "sans-serif"],
+        'tangerine': ["var(--font-tangerine)", "cursive"],
       },
     },
   },

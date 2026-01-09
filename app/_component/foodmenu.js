@@ -6,7 +6,7 @@ export default function Foodmenu() {
         <>
             <section id='foodMenu'>
                 {/* =====wrapper===== */}
-                <div className='w-full h-full flex justify-center items-center p-5 py-12' >
+                <div className='w-full h-full flex justify-center items-center p-5 py-12 lg:py-40' >
                     <div className='w-full max-w-7xl h-full flex flex-col justify-center items-center gap-12 lg:flex-row'>
                         {/* ---ptoto galary---- */}
                         <div className='w-full lg:w-1/2 max-w-3xl h-full flex flex-wrap'>
@@ -76,7 +76,7 @@ export default function Foodmenu() {
                                         </div>
                                     </div>
                                     <div className='border-y-2 border-y-amber-600 py-5'>
-                                        <span className='text-5xl text-amber-600'>$15</span>
+                                        <span className='text-5xl text-amber-600 font-tangerine'>$15</span>
                                     </div>
                                 </li>
                                 <li className='flex justify-between gap-8 items-center'>
@@ -88,7 +88,7 @@ export default function Foodmenu() {
                                         </div>
                                     </div>
                                     <div className='border-y-2 border-y-amber-600 py-5'>
-                                        <span className='text-5xl text-amber-600'>$15</span>
+                                        <span className='text-5xl text-amber-600 font-tangerine'>$27</span>
                                     </div>
                                 </li>
                                 <li className='flex justify-between gap-8 items-center'>
@@ -100,7 +100,7 @@ export default function Foodmenu() {
                                         </div>
                                     </div>
                                     <div className='border-y-2 border-y-amber-600 py-5'>
-                                        <span className='text-5xl text-amber-600'>$15</span>
+                                        <span className='text-5xl text-amber-600 font-tangerine'>$32</span>
                                     </div>
                                 </li>
                             </ul>

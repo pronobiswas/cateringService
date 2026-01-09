@@ -34,19 +34,19 @@ export default function Banner() {
       <section id="banner" ref={bannerRef}>
         <div onMouseMove={handleMouseMove} className='w-full h-screen border-4 overflow-hidden'>
           {/* ===wrapper=== */}
-          <div 
-          style={{
-            backgroundImage: `
+          <div
+            style={{
+              backgroundImage: `
               linear-gradient(
                 rgba(0, 0, 0, 0.5),
                 rgba(0, 0, 0, 0.1)
               ),
               url("/slide01.jpg")
             `,
-            backgroundSize:'100% 100%',
-            backgroundPosition:'enter center'
-          }}
-          className='w-full h-full flex justify-between '>
+              backgroundSize: '100% 100%',
+              backgroundPosition: 'enter center'
+            }}
+            className='w-full h-full flex justify-between '>
             {/* ====aside==== */}
             <aside className='w-2/8 h-full relative'>
               <img
@@ -73,7 +73,7 @@ export default function Banner() {
               />
             </aside>
             {/* ===centerdiv=== */}
-            <div className='w-4/8 h-full flex items-center justify-center' >
+            <div className='w-4/8 h-full flex items-center justify-center relative' >
               <div className='w-full h-96 absolute md:static text-white text-center z-50'>
                 <h2 className='text-5xl text-amber-500 font-tangerine'> <b>Discover</b></h2>
                 <h1 className='text-7xl font-tangerine'>Meal Deal</h1>
@@ -96,19 +96,14 @@ export default function Banner() {
                     <div className='w-full h-[2px] bg-amber-600'></div>
                   </div>
                 </div>
-                <h5 className='text-2xl'>Opening Hour</h5>
+                <h5 className='text-2xl'>Order Fresh Food or Sell Your Dishes — All in One App</h5>
                 <p className='text-base md:text-xl'>
-                  <strong> Monday - Friday: </strong>
-                  08:00 A.M. - 23:00 P.M.
-                </p>
-                <p className='text-base md:text-xl'>
-                  <strong>Weekends :</strong>
-                  08:00 A.M. - 02:00 P.M.
+                  <strong> A food service platform where customers order delicious meals and chefs earn by cooking. </strong>
                 </p>
               </div>
               <img
                 src='/slide01-11.png'
-                className='w-full h-40 object-contain absolute bottom-0 left-0'
+                className='w-full h-40 object-contain absolute bottom-0 left-0 z-50'
               />
             </div>
             {/* ====aside==== */}

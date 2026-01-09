@@ -141,25 +141,25 @@ export default function Eventslider() {
   return (
     <section 
     id="eventSlider" 
-    className="relative w-full p-5 py-20 overflow-hidden bg-gray-50">
+    className="relative w-full h-full p-5 py-20 lg:py-40 overflow-hidden bg-gray-50">
       <div
         ref={dragRef}
-        className="relative w-full select-none touch-pan-y cursor-grab active:cursor-grabbing"
+        className="relative w-full h-full select-none touch-pan-y cursor-grab active:cursor-grabbing"
       >
         {/* SLIDER */}
-        <div ref={sliderRef} className="relative w-full min-h-[450px]">
+        <div ref={sliderRef} className="relative w-full h-full min-h-[450px]">
           {/* ===== SLIDE 1 ===== */}
-          <div className="event-slide absolute inset-0 w-full flex justify-center">
+          <div className="event-slide absolute inset-0 w-full h-full flex justify-center">
             <SlideContent />
           </div>
 
           {/* ===== SLIDE 2 ===== */}
-          <div className="event-slide absolute inset-0 w-full flex justify-center">
+          <div className="event-slide absolute inset-0 w-full h-full flex justify-center">
             <SlideContent1 />
           </div>
 
           {/* ===== SLIDE 3 ===== */}
-          <div className="event-slide absolute inset-0 w-full flex justify-center">
+          <div className="event-slide absolute inset-0 w-full h-full flex justify-center">
             <SlideContent2 />
           </div>
         </div>
@@ -186,18 +186,18 @@ export default function Eventslider() {
 /* ---------------- SLIDE CONTENT (REUSED) ---------------- */
 function SlideContent() {
   return (
-    <div className="w-full max-w-7xl h-full min-h-96 flex justify-center items-center">
+    <div className="w-full max-w-7xl h-full min-h-96 flex flex-col md:flex-row justify-center items-center">
       {/* Image */}
-      <div className="w-1/2 h-full order-1 lg:order-2">
+      <div className="w-full md:w-1/2 h-full order-1 lg:order-2">
         <div className="w-full h-full">
           <img src='/img-01.jpg' className='w-full h-full object-cover' />
         </div>
       </div>
 
       {/* Text */}
-      <div className="w-1/2 h-full px-6 order-2 lg:order-1">
+      <div className="w-full md:w-1/2 h-full px-6 order-2 lg:order-1">
         <div className="text-center">
-          <h3 className="text-3xl">Catering</h3>
+          <h3 className="text-4xl font-tangerine text-amber-600"><b>Meal Deal</b></h3>
           <h3 className="text-5xl">Special events</h3>
 
           <div className="flex justify-center items-center gap-1 mt-2">
@@ -207,15 +207,14 @@ function SlideContent() {
           </div>
         </div>
 
-        <ul className="flex justify-center gap-5 list-disc mt-4">
-          <li>Weddings</li>
-          <li>Anniversaires</li>
-          <li>Baby showers</li>
+        <ul className="flex justify-center gap-5 list-disc marker:text-amber-600 mt-4 ">
+          <li >Weddings</li>
+          <li >Anniversaires</li>
+          <li >Baby showers</li>
         </ul>
 
         <p className="text-center mt-4">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          Perfect food for weddings, anniversaries, and baby showers—because every celebration deserves great taste.
         </p>
 
         <div className="flex justify-center mt-4">
@@ -230,18 +229,18 @@ function SlideContent() {
 
 function SlideContent1() {
   return (
-    <div className="w-full max-w-7xl h-full min-h-96 flex justify-center items-center">
+    <div className="w-full max-w-7xl h-full min-h-96 flex flex-col md:flex-row justify-center items-center">
       {/* Image */}
-      <div className="w-1/2 h-full order-1 lg:order-2">
+      <div className="w-full md:w-1/2 h-full order-1 lg:order-2">
         <div className="w-full h-full">
           <img src='/img-09.jpg' className='w-full h-full object-cover' />
         </div>
       </div>
 
       {/* Text */}
-      <div className="w-1/2 h-full px-6 order-2 lg:order-1">
+      <div className="w-full md:w-1/2 h-full px-6 order-2 lg:order-1">
         <div className="text-center">
-          <h3 className="text-3xl">Catering</h3>
+          <h3 className="text-4xl font-tangerine text-amber-600"><b>Meal Deal</b></h3>
           <h3 className="text-5xl">Corporate events</h3>
 
           <div className="flex justify-center items-center gap-1 mt-2">
@@ -251,15 +250,14 @@ function SlideContent1() {
           </div>
         </div>
 
-        <ul className="flex justify-center gap-5 list-disc mt-4">
+        <ul className="flex justify-center gap-5 list-disc marker:text-amber-600 mt-4">
           <li>Meetings,</li>
           <li>Team buildings,</li>
           <li>Corporate parties</li>
         </ul>
 
         <p className="text-center mt-4">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          Make your special moments unforgettable with customized food for Meetings, Team buildings, and Corporate parties—crafted with care and love.
         </p>
 
         <div className="flex justify-center mt-4">
@@ -274,18 +272,18 @@ function SlideContent1() {
 
 function SlideContent2() {
   return (
-    <div className="w-full max-w-7xl h-full min-h-96 flex justify-center items-center">
+    <div className="w-full max-w-7xl h-full min-h-96 flex flex-col md:flex-row justify-center items-center">
       {/* Image */}
-      <div className="w-1/2 h-full order-1 lg:order-2">
+      <div className="w-full md:w-1/2 h-full order-1 lg:order-2">
         <div className="w-full h-full">
           <img src='/img-09.jpg' className='w-full h-full object-cover' />
         </div>
       </div>
 
       {/* Text */}
-      <div className="w-1/2 h-full px-6 order-2 lg:order-1">
+      <div className="w-full md:w-1/2 h-full px-6 order-2 lg:order-1">
         <div className="text-center">
-          <h3 className="text-3xl">Catering</h3>
+          <h3 className="text-4xl font-tangerine text-amber-600"><b>Meal Deal</b></h3>
           <h3 className="text-5xl">Social events</h3>
 
           <div className="flex justify-center items-center gap-1 mt-2">
@@ -295,15 +293,14 @@ function SlideContent2() {
           </div>
         </div>
 
-        <ul className="flex justify-center gap-5 list-disc mt-4">
-          <li>Birthdays,</li>
-          <li>Family reunion,</li>
+        <ul className="flex justify-center gap-5 list-disc marker:text-amber-600 mt-4">
+          <li>Birthdays</li>
+          <li>Family reunion</li>
           <li>Or just because</li>
         </ul>
 
         <p className="text-center mt-4">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          Celebrate Birthdays, Family reunion, and Or just because with delicious, chef-made meals designed to bring people together.
         </p>
 
         <div className="flex justify-center mt-4">

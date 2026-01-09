@@ -28,8 +28,7 @@ export default function Ourstory() {
                                 </div>
                                 <div className='w-36 h-[2px] bg-amber-200'></div>
                             </div>
-                            <p className='text-gray-400 w-full max-w-96'>Welcome. This is Royal plate. Elegant & sophisticated restaurant template. Royal plate offers different home page layouts with smart and unique design, showcasing beautifully designed elements every restaurant website should have. Smooth animations, fast loading and engaging user experience are just some of the features this template offers.
-                                So, give it a try and dive into a world of royal restaurant websites.</p>
+                            <p className='text-gray-600 w-full max-w-96'>A home-cooked food marketplace where passionate chefs share their meals and food lovers discover authentic flavors, made with care and love.Connect with local chefs, order freshly cooked meals, and enjoy safe, home-style food—made by people who truly love cooking.A trusted platform where chefs cook, customers enjoy, and everyone connects through the joy of real, homemade food.</p>
                         </div>
                         <div className='w-1/4 hidden md:block'>
                             <img src='/spices-right.png' />

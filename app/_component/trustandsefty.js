@@ -39,7 +39,7 @@ export default function Trustandsefty() {
         ease: 'power3.out',
         scrollTrigger: {
           trigger: headingRef.current,
-          start: 'top 70%',
+          start: 'top 80%',
           end:'+=100',
           scrub:true,
         },

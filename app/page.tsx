@@ -7,6 +7,7 @@ import Foodmenu from './_component/foodmenu'
 import Rolesection from './_component/rolesection'
 import Eventslider from './_component/eventslider'
 import Trustandsefty from './_component/trustandsefty'
+import Contactform from './_component/contactform'
 import Footer from './_component/footer'
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
         <Rolesection />
         <Eventslider />
         <Trustandsefty />
+        <Contactform />
         <Footer />
       </main>
     </div>

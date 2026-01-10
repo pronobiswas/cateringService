@@ -8,27 +8,27 @@ import { TbShoppingBagCheck } from 'react-icons/tb'
 export default function Howitworks() {
   return (
     <>
-      <section id='howItWorks' className='w-full h-full bg-amber-50 py-12'>
+      <section id='howItWorks' className='w-full h-full bg-amber-50/20 py-12'>
         <h2 className='text-4xl text-center py-5 text-amber-600'>How its work</h2>
         <div className='w-full h-fit flex flex-col justify-center items-center'>
-              <div className='w-xs flex justify-center items-center gap-1'>
-                <div className='w-1/3 h-[2px] bg-amber-600'></div>
-                <div className='w-2 h-2 bg-amber-600 outline-2 outline-amber-600 outline-offset-2'></div>
-                <div className='w-1/3 h-[2px] bg-amber-600'></div>
-              </div>
-            </div>
+          <div className='w-xs flex justify-center items-center gap-1'>
+            <div className='w-1/3 h-[2px] bg-amber-600'></div>
+            <div className='w-2 h-2 bg-amber-600 outline-2 outline-amber-600 outline-offset-2'></div>
+            <div className='w-1/3 h-[2px] bg-amber-600'></div>
+          </div>
+        </div>
         <div className='w-full h-full max-w-7xl mx-auto flex'>
           {/* ====For Customers===== */}
           <div className='w-1/2 h-full p-5'>
             {/* ------customer------ */}
-              <h3 className='text-xl text-center w-fit h-fit mx-auto border-2 border-amber-500 px-4 py-2 rounded-xl  bg-gradient-to-t from-orange-500 to-amber-400'>For Customer</h3>
+            <h3 className='text-xl text-center w-fit h-fit mx-auto border-2 border-amber-500 px-4 py-2 rounded-xl  bg-gradient-to-t from-orange-500 to-amber-400'>For Customer</h3>
 
             <div className='w-full h-[600px] relative flex items-center justify-center '>
               <div className='w-[2px] h-full bg-amber-500 relative'>
                 {/* ---circle1--- */}
-                <div className='w-12 h-12 bg-amber-50 border-2 border-amber-500 rounded-full absolute top-1/5 left-1/2 -translate-x-1/2 flex justify-center items-center'>
+                <div className='w-12 h-12 bg-amber-50 border-2 border-amber-500 rounded-full absolute top-1/5 left-1/2 -translate-x-1/2 flex justify-center items-center lg:w-20 lg:h-20'>
                   <IoFastFoodOutline className='text-3xl text-amber-600' />
-                  <div className='w-[100px] h-fit px-2 py-1 text-center bg-gradient-to-b from-orange-500 to-amber-400 border-2 border-amber-500 absolute top-1/5 left-14 -translate-y-1/3 rounded-2xl '>Browse food</div>
+                  <div className='w-[100px] h-fit px-2 py-1 text-center bg-gradient-to-b from-orange-500 to-amber-400 border-2 border-amber-500 absolute top-1/5 left-14 -translate-y-1/3 rounded-2xl lg:w-40 lg:text-xl lg:left-20 -lg:traslate-y-4/5'>Browse food</div>
                 </div>
                 {/* ---circle2--- */}
                 <div className='w-12 h-12 bg-amber-50 border-2 border-amber-500 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 flex justify-center items-center'>
@@ -52,17 +52,17 @@ export default function Howitworks() {
               <div className='w-[2px] h-full bg-amber-500 relative'>
                 {/* ---circle1--- */}
                 <div className='w-12 h-12 bg-amber-50 border-2 border-amber-500 rounded-full absolute top-1/5 left-1/2 -translate-x-1/2 flex justify-center items-center'>
-                <PiChefHatLight className='text-3xl text-amber-600' />
+                  <PiChefHatLight className='text-3xl text-amber-600' />
                   <div className='w-[100px] h-fit px-2 py-1 text-center bg-gradient-to-b from-orange-500 to-amber-400 border-2 border-amber-500 absolute top-1/5 right-14 -translate-y-1/3 rounded-2xl '>Register as a chef</div>
                 </div>
                 {/* ---circle2--- */}
                 <div className='w-12 h-12 bg-amber-50 border-2 border-amber-500 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 flex justify-center items-center'>
-                <BiDish className='text-3xl text-amber-600'/>
+                  <BiDish className='text-3xl text-amber-600' />
                   <div className='w-[100px] h-fit px-2 py-1 text-center bg-gradient-to-b from-orange-500 to-amber-400 border-2 border-amber-500 absolute top-1/5 left-14 -translate-y-1/3 rounded-2xl '>Upload dishes</div>
                 </div>
                 {/* ---circle3--- */}
                 <div className='w-12 h-12 bg-amber-50 border-2 border-amber-500 rounded-full absolute top-4/5 left-1/2 -translate-x-1/2 flex justify-center items-center'>
-                <GiReceiveMoney className='text-3xl text-amber-600' />
+                  <GiReceiveMoney className='text-3xl text-amber-600' />
                   <div className='w-[130px] h-fit px-2 py-1 text-center bg-gradient-to-b from-orange-500 to-amber-400 border-2 border-amber-500 absolute top-1/5 right-14 -translate-y-1/3 rounded-2xl '>Receive orders & earn</div></div>
                 <div></div>
               </div>

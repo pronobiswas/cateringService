@@ -166,7 +166,7 @@ export default function Eventslider() {
       </div>
 
       {/* PAGINATION */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30s flex gap-3">
         {[0, 1, 2].map((_, i) => (
           <button
             key={i}
@@ -195,7 +195,7 @@ function SlideContent() {
       </div>
 
       {/* Text */}
-      <div className="w-full md:w-1/2 h-full px-6 order-2 lg:order-1">
+      <div className="w-full md:w-1/2 h-fit px-6 order-2 lg:order-1">
         <div className="text-center">
           <h3 className="text-4xl font-tangerine text-amber-600"><b>Meal Deal</b></h3>
           <h3 className="text-5xl">Special events</h3>
@@ -238,7 +238,7 @@ function SlideContent1() {
       </div>
 
       {/* Text */}
-      <div className="w-full md:w-1/2 h-full px-6 order-2 lg:order-1">
+      <div className="w-full md:w-1/2 h-fit px-6 order-2 lg:order-1">
         <div className="text-center">
           <h3 className="text-4xl font-tangerine text-amber-600"><b>Meal Deal</b></h3>
           <h3 className="text-5xl">Corporate events</h3>
@@ -281,7 +281,7 @@ function SlideContent2() {
       </div>
 
       {/* Text */}
-      <div className="w-full md:w-1/2 h-full px-6 order-2 lg:order-1">
+      <div className="w-full md:w-1/2 h-fit px-6 order-2 lg:order-1">
         <div className="text-center">
           <h3 className="text-4xl font-tangerine text-amber-600"><b>Meal Deal</b></h3>
           <h3 className="text-5xl">Social events</h3>

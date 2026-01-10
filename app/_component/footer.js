@@ -16,46 +16,59 @@ export default function Footer() {
                     paddingTop: "65px",
                 }}
                 id='footer'>
-                <div className='w-full h-fit borer border-amber-600 p-5 py-40'>
-                    <div className='w-full max-w-7xl h-full mx-auto flex justify-between text-white'>
+                <div className='w-full h-fit borer border-amber-600 p-5 pt-8'>
+                    <div className='w-full max-w-7xl h-full mx-auto flex justify-between gap-8 text-white'>
                         {/* ====section1==== */}
-                        <div className='w-1/4 h-full flex flex-col gap-8'>
+                        <div className='w-1/4 h-full flex flex-col gap-2'>
                             <img src={`/logo.png`} alt='footer logo' width={'100%'} height={'100%'} />
+                            <h4>Connecting food lovers with talented chefs</h4>
                             <div className='w-full'>
-                                <h5 className='text-2xl'>Opening Hour</h5>
-                                <p className='text-base md:text-xl'>
+                                <h5 className='text-2xl py-4'>Opening Hour</h5>
+                                <p className='text-sm'>
                                     <strong> Monday - Friday: </strong>
                                     08:00 A.M. - 23:00 P.M.
                                 </p>
-                                <p className='text-base md:text-xl'>
+                                <p className='text-sm'>
                                     <strong>Weekends :</strong>
                                     08:00 A.M. - 02:00 P.M.
                                 </p>
                             </div>
                         </div>
                         {/* ====section2==== */}
-                        <div className='w-2/4'>
-                            <h5 className='text-2xl'>Opening Hour</h5>
-                            <p className='text-base md:text-xl'>
-                                <strong> Monday - Friday: </strong>
-                                08:00 A.M. - 23:00 P.M.
-                            </p>
-                            <p className='text-base md:text-xl'>
-                                <strong>Weekends :</strong>
-                                08:00 A.M. - 02:00 P.M.
-                            </p>
+                        <div className='w-1/4'>
+                            <h5 className='text-2xl'>Legal</h5>
+                            <ul className='mt-5 flex flex-col gap-1'>
+                                <li>Privacy Policy</li>
+                                <li>Terms & Conditions</li>
+                                <li>Refund Policy</li>
+                            </ul>
+                            
                         </div>
                         {/* ====section3==== */}
                         <div className='w-1/4'>
-                            <ul>
-                                <li>Privacy Policy</li>
-                                <li>Terms & Conditions</li>
-                                <li>Email: someone@example.mail</li>
-                                <li>App Name + Copyright</li>
+                        <h5 className='text-2xl'>Support</h5>
+                            <ul className='mt-5 flex flex-col gap-1'>
+                                <li>Help Center</li>
+                                <li>Contact Us</li>
+                                <li>FAQ</li>
 
-                                <li>https://claude.ai/public/artifacts/37aaeb12-49a4-4d64-aabd-9b59bb90d99b</li>
+                                {/* <li>https://claude.ai/public/artifacts/37aaeb12-49a4-4d64-aabd-9b59bb90d99b</li> */}
                             </ul>
                         </div>
+                        {/* ====section4==== */}
+                        <div className='w-1/4'>
+                        <h5 className='text-2xl'>Contact</h5>
+                            <ul className='mt-5 flex flex-col gap-1'>
+                                <li>Email: someone@example.mail</li>
+                                <li>Phone: +00 xxx-xxx-xxx</li>
+                                <li>Email: someone@example.mail</li>
+                                {/* <li>https://claude.ai/public/artifacts/37aaeb12-49a4-4d64-aabd-9b59bb90d99b</li> */}
+                            </ul>
+                        </div>
+                    </div>
+                    {/* ====footnote=== */}
+                    <div className='p-5 py-8'>
+                        <p className='text-center text-amber-50'>© 2026 <strong className='text-2xl text-amber-600 font-tangerine'>MealDeal</strong>. All rights reserved.</p>
                     </div>
                 </div>
             </footer>
@@ -63,7 +76,8 @@ export default function Footer() {
     )
 }
 
-
+// #fd9a00
+// oklch(76.9% 0.188 70.08)
 
 // footer-wrapper {
 //     position: relative;

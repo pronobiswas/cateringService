@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google"
 import localFont from "next/font/local"
 import "./globals.css"
 import ScrollSmootherProvider from "./_component/ScrollSmootherProvider"
+import Header from "./_component/header"
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -35,8 +36,14 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${tangerine.variable} font-montserrat antialiased`}
       >
+        <>
+        <Header />
+        </>
         <ScrollSmootherProvider>
+          <main>
+
           {children}
+          </main>
         </ScrollSmootherProvider>
       </body>
     </html>

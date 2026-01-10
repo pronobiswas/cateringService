@@ -18,7 +18,7 @@ export default function Foodmenu() {
                                 />
                                 {/* --image overlay-- */}
                                 <div className='absolute w-full h-full bg-black/10 top-0 left-0 flex justify-center items-center opacity-0 group-hover:opacity-100 ease-in-out'>
-                                <span className='text-7xl text-amber-400'><PiPlus /></span>
+                                    <span className='text-7xl text-amber-400'><PiPlus /></span>
                                 </div>
                             </div>
 
@@ -30,7 +30,7 @@ export default function Foodmenu() {
                                 />
                                 {/* --image overlay-- */}
                                 <div className='absolute w-full h-full bg-black/10 top-0 left-0 flex justify-center items-center opacity-0 group-hover:opacity-100 ease-in-out'>
-                                <span className='text-7xl text-amber-400'><PiPlus /></span>
+                                    <span className='text-7xl text-amber-400'><PiPlus /></span>
                                 </div>
                             </div>
 
@@ -42,7 +42,7 @@ export default function Foodmenu() {
                                 />
                                 {/* --image overlay-- */}
                                 <div className='absolute w-full h-full bg-black/10 top-0 left-0 flex justify-center items-center opacity-0 group-hover:opacity-100 ease-in-out'>
-                                <span className='text-7xl text-amber-400'><PiPlus /></span>
+                                    <span className='text-7xl text-amber-400'><PiPlus /></span>
                                 </div>
                             </div>
 
@@ -54,7 +54,7 @@ export default function Foodmenu() {
                                 />
                                 {/* --image overlay-- */}
                                 <div className='absolute w-full h-full bg-black/10 top-0 left-0 flex justify-center items-center opacity-0 group-hover:opacity-100 ease-in-out'>
-                                <span className='text-7xl text-amber-400'><PiPlus /></span>
+                                    <span className='text-7xl text-amber-400'><PiPlus /></span>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +69,10 @@ export default function Foodmenu() {
                             <ul className='pt-8 w-full flex flex-col gap-5'>
                                 <li className='flex justify-between gap-8 items-center'>
                                     <div className='flex items-center gap-5'>
-                                        <div className='w-24 h-24 bg-amber-600 rounded-full shrink-0'></div>
+                                        <div className='w-24 h-24 bg-amber-600 rounded-full shrink-0 flex justify-center items-center overflow-hidden p-1'>
+                                            <img src='/breakfast.jpg' alt='breakfast' className='w-full h-full object-cover rounded-full' />
+
+                                        </div>
                                         <div>
                                             <h4 className='text-xl mb-2'>Royal breakfast</h4>
                                             <p>Fried eggs, fried bacon, toast, fresh tomato salad, cup of coffee or tea</p>
@@ -81,7 +84,9 @@ export default function Foodmenu() {
                                 </li>
                                 <li className='flex justify-between gap-8 items-center'>
                                     <div className='flex items-center gap-5'>
-                                        <div className='w-24 h-24 bg-amber-600 rounded-full shrink-0'></div>
+                                        <div className='w-24 h-24 bg-amber-600 rounded-full shrink-0'>
+                                            
+                                        </div>
                                         <div>
                                             <h4 className='text-xl mb-2'>Royal lunch</h4>
                                             <p>Fried eggs, fried bacon, toast, fresh tomato salad, cup of coffee or tea</p>

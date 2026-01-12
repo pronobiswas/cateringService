@@ -1,9 +1,79 @@
 'use client'
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin( SplitText);
 
 export default function Banner() {
   const bannerRef = useRef(null);
+  const titleRef = useRef(null);
+  const headingRef = useRef(null);
+  const subHeadingRef = useRef(null);
+  const paragraphRef = useRef(null);
+   useEffect(() => {
+          if (!headingRef.current || !subHeadingRef.current) return
+  
+          const ctx = gsap.context(() => {
+              const splitHeading = new SplitText(headingRef.current, {
+                  type: 'chars,words,lines',
+                  linesClass: 'line ',
+                  mask: 'lines'
+              })
+  
+              const splitSubHeading = new SplitText(subHeadingRef.current, {
+                  type: 'chars,words,lines',
+                  linesClass: 'line',
+                  mask: 'lines'
+              })
+              const splitParagraph = new SplitText(paragraphRef.current, {
+                  type: 'chars,words,lines',
+                  linesClass: 'line',
+                  mask: 'lines'
+              })
+  
+  
+              gsap.from(splitHeading.lines, {
+                  y: 80,
+                  opacity: 0,
+                  duration: 1,
+                  stagger: 0.03,
+                  ease: 'power3.out',
+              })
+  
+              gsap.from(splitSubHeading.lines, {
+                  y: 60,
+                  opacity: 0,
+                  duration: 0.8,
+                  stagger: 0.02,
+                  ease: 'power3.out',
+              })
+              // gsap.from(boxRef.current, {
+              //     y: 60,
+              //     opacity: 0,
+              //     duration: 0.8,
+              //     stagger: 0.02,
+              //     ease: 'power3.out',
+              // })
+              gsap.from(splitParagraph.words, {
+                  y: 60,
+                  opacity: 0,
+                  duration: 0.8,
+                  stagger: 0.02,
+                  ease: 'power3.out',
+              })
+              gsap.from('.bannerhorizontalLine', {
+                  width:'0',
+                  duration: 0.8,
+                  stagger: 0.02,
+                  ease: 'power3.out',
+              })
+  
+  
+  
+          }, bannerRef)
+  
+          return () => ctx.revert()
+      }, [])
 
   const handleMouseMove = (e) => {
     const banner = bannerRef.current;
@@ -75,13 +145,13 @@ export default function Banner() {
             {/* ===centerdiv=== */}
             <div className='w-4/8 h-full flex items-center justify-center relative' >
               <div className='w-full h-96 absolute md:static text-white text-center z-50'>
-                <h2 className='text-5xl text-amber-500 font-tangerine'> <b>Discover</b></h2>
-                <h1 className='text-7xl font-tangerine'>Meal Deal</h1>
+                <h2 ref={titleRef} className='text-5xl text-amber-500 font-tangerine'> <b>Discover</b></h2>
+                <h1 ref={headingRef} className='text-7xl font-tangerine'>Meal Deal</h1>
                 {/* ----divider---- */}
                 <div className='w-full max-w-xl mx-auto flex items-center justify-baseline mt-5 mb-8'>
                   <div className='w-full flex flex-col gap-2 items-end'>
-                    <div className='w-4/5 h-[2px] bg-amber-600'></div>
-                    <div className='w-full h-[2px] bg-amber-600'></div>
+                    <div className='bannerhorizontalLine w-4/5 h-[2px] bg-amber-600'></div>
+                    <div className='bannerhorizontalLine w-full h-[2px] bg-amber-600'></div>
                   </div>
                   <div>
                     <svg width="48" height="48" viewBox="0 0 482 646" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,12 +162,12 @@ export default function Banner() {
 
                   </div>
                   <div className='w-full flex flex-col gap-2'>
-                    <div className='w-4/5 h-[2px] bg-amber-600'></div>
-                    <div className='w-full h-[2px] bg-amber-600'></div>
+                    <div className='bannerhorizontalLine w-4/5 h-[2px] bg-amber-600'></div>
+                    <div className='bannerhorizontalLine w-full h-[2px] bg-amber-600'></div>
                   </div>
                 </div>
-                <h5 className='text-2xl'>Order Fresh Food or Sell Your Dishes — All in One App</h5>
-                <p className='text-base md:text-xl'>
+                <h5 ref={subHeadingRef} className='text-2xl'>Order Fresh Food or Sell Your Dishes — All in One App</h5>
+                <p ref={paragraphRef} className='text-base md:text-xl'>
                   <strong> A food service platform where customers order delicious meals and chefs earn by cooking. </strong>
                 </p>
               </div>

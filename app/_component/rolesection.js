@@ -21,7 +21,6 @@ export default function Rolesection() {
                         start: 'top 70%',
                         end: '+=400',
                         scrub: true,
-                        markers: true,
                     }
                 })
                 gsap.from('.forChefCard', {
@@ -34,7 +33,6 @@ export default function Rolesection() {
                         start: 'top 70%',
                         end: '+=400',
                         scrub: true,
-                        markers: true,
                     }
                 })
             }, roleSectionRef)

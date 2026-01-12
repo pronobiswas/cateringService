@@ -26,7 +26,6 @@ export default function Foodmenu() {
                     start: 'top 65%',
                     end: '+=100',
                     scrub: true,
-                    markers: true,
                 }
             })
             gsap.from('.galaryItem', {
@@ -39,7 +38,6 @@ export default function Foodmenu() {
                     start: 'top 70%',
                     end: '+=400',
                     scrub: true,
-                    // markers: true,
                 }
             })
 

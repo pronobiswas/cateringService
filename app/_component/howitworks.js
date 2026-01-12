@@ -83,7 +83,6 @@ export default function Howitworks() {
           start: 'top 80%',
           end: '+=400',
           scrub: true,
-          markers: true,
         },
       })
       tl.from(split.lines, {

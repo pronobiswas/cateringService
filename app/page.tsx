@@ -4,6 +4,7 @@ import Banner from './_component/banner'
 import Ourstory from './_component/ourstory'
 import Howitworks from './_component/howitworks'
 import Foodmenu from './_component/foodmenu'
+import AppPreview from './_component/appPreview'
 import Rolesection from './_component/rolesection'
 import Eventslider from './_component/eventslider'
 import Trustandsefty from './_component/trustandsefty'
@@ -19,6 +20,7 @@ export default function Home() {
         <Ourstory />
         <Howitworks />
         <Foodmenu />
+        <AppPreview />
         <Rolesection />
         <Eventslider />
         <Trustandsefty />

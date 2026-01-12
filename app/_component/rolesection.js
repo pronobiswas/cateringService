@@ -1,9 +1,50 @@
-import React from 'react'
+'use client'
+import React, { useLayoutEffect, useRef } from 'react';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Rolesection() {
+    const roleSectionRef = useRef('null');
+    const forChefRef = useRef('null');
+    useLayoutEffect(() => {
+
+            const ctx = gsap.context(() => {
+                
+                gsap.from('.hex', {
+                    filter: 'blur(5px)',
+                    rotate:360,
+                    duration: 0.5,
+                    stagger:0.5,
+                    scrollTrigger: {
+                        trigger: roleSectionRef.current,
+                        start: 'top 70%',
+                        end: '+=400',
+                        scrub: true,
+                        markers: true,
+                    }
+                })
+                gsap.from('.forChefCard', {
+                    filter: 'blur(5px)',
+                    scale:1.1,
+                    duration: 0.5,
+                    stagger:0.5,
+                    scrollTrigger: {
+                        trigger: forChefRef.current,
+                        start: 'top 70%',
+                        end: '+=400',
+                        scrub: true,
+                        markers: true,
+                    }
+                })
+            }, roleSectionRef)
+    
+            return () => ctx.revert()
+        }, [])
     return (
         <>
             <section
+            ref={roleSectionRef}
                 id='roleSection'
                 className='w-full h-full'>
                 <div className='w-full h-full  mx-auto flex flex-col lg:flex-row '>
@@ -37,7 +78,7 @@ export default function Rolesection() {
                         </div>
                     </div>
                     {/* ====For Chefs===== */}
-                    <div className='w-full h-auto lg:w-1/2 bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/chef.jpg")] bg-cover bg-center py-20 flex justify-center lg:justify-start'>
+                    <div ref={forChefRef} className='w-full h-auto lg:w-1/2 bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/chef.jpg")] bg-cover bg-center py-20 flex justify-center lg:justify-start'>
                         <div className='w-full max-w-3xl h-fit '>
                             <div className='w-full h-fit flex flex-wrap justify-center gap-x-12 gap-y-2 '>
                                 <div className='forChefCard'>

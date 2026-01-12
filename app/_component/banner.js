@@ -33,10 +33,10 @@ export default function Banner() {
   
   
               gsap.from(splitHeading.lines, {
-                  y: 80,
+                  y: 180,
                   opacity: 0,
                   duration: 1,
-                  stagger: 0.03,
+                  stagger: 1,
                   ease: 'power3.out',
               })
   
@@ -47,13 +47,6 @@ export default function Banner() {
                   stagger: 0.02,
                   ease: 'power3.out',
               })
-              // gsap.from(boxRef.current, {
-              //     y: 60,
-              //     opacity: 0,
-              //     duration: 0.8,
-              //     stagger: 0.02,
-              //     ease: 'power3.out',
-              // })
               gsap.from(splitParagraph.words, {
                   y: 60,
                   opacity: 0,
@@ -65,6 +58,11 @@ export default function Banner() {
                   width:'0',
                   duration: 0.8,
                   stagger: 0.02,
+                  ease: 'power3.out',
+              })
+              gsap.from('.bottomImage', {
+                  y: 360,
+                  duration:1.5,
                   ease: 'power3.out',
               })
   
@@ -144,7 +142,7 @@ export default function Banner() {
             </aside>
             {/* ===centerdiv=== */}
             <div className='w-4/8 h-full flex items-center justify-center relative' >
-              <div className='w-full h-96 absolute md:static text-white text-center z-50'>
+              <div className='w-full max-w-xl h-96 absolute md:static text-white text-center z-50'>
                 <h2 ref={titleRef} className='text-5xl text-amber-500 font-tangerine'> <b>Discover</b></h2>
                 <h1 ref={headingRef} className='text-7xl font-tangerine'>Meal Deal</h1>
                 {/* ----divider---- */}
@@ -173,7 +171,7 @@ export default function Banner() {
               </div>
               <img
                 src='/slide01-11.png'
-                className='w-full h-40 object-contain absolute bottom-0 left-0 z-50'
+                className='bottomImage w-full h-40 object-contain absolute bottom-0 left-0 z-50'
               />
             </div>
             {/* ====aside==== */}

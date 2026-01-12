@@ -1,16 +1,61 @@
-import React from 'react'
-import { PiPlus } from 'react-icons/pi'
+'use client';
+import React, { useLayoutEffect, useRef } from 'react';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
+import { PiPlus } from 'react-icons/pi';
+import { Scale } from 'lucide-react';
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function Foodmenu() {
+    const formTheMenuRef = useRef(null);
+    const formTheMenuGalaryRef = useRef(null);
+    const menuListRef = useRef(null);
+    useLayoutEffect(() => {
+        let splitHeading = SplitText.create('.menuHeading', {
+            type: "chars, words, lines",
+            mask: "lines",
+            linesClass: "line++",
+        });
+        const ctx = gsap.context(() => {
+            gsap.from(splitHeading.lines, {
+                y: '80',
+                duration: 1,
+                scrollTrigger: {
+                    trigger: menuListRef.current,
+                    start: 'top 65%',
+                    end: '+=100',
+                    scrub: true,
+                    markers: true,
+                }
+            })
+            gsap.from('.galaryItem', {
+                filter: 'blur(5px)',
+                scale:1.1,
+                duration: 0.5,
+                stagger:0.5,
+                scrollTrigger: {
+                    trigger: formTheMenuGalaryRef.current,
+                    start: 'top 70%',
+                    end: '+=400',
+                    scrub: true,
+                    // markers: true,
+                }
+            })
+
+        }, formTheMenuRef)
+
+        return () => ctx.revert()
+    }, [])
     return (
         <>
-            <section id='foodMenu'>
+            <section ref={formTheMenuRef} id='foodMenu'>
                 {/* =====wrapper===== */}
                 <div className='w-full h-full flex justify-center items-center p-5 py-12 lg:py-40' >
                     <div className='w-full max-w-7xl h-full flex flex-col justify-center items-center gap-12 lg:flex-row'>
                         {/* ---ptoto galary---- */}
-                        <div className='w-full lg:w-1/2 max-w-3xl h-full flex flex-wrap'>
-                            <div className='w-1/2 aspect-square relative group overflow-hidden'>
+                        <div ref={formTheMenuGalaryRef} className='w-full lg:w-1/2 max-w-3xl h-full flex flex-wrap'>
+                            <div className='galaryItem w-1/2 aspect-square relative group overflow-hidden'>
                                 <img
                                     src='gallery-1s.jpg'
                                     alt='glaryImage'
@@ -22,7 +67,7 @@ export default function Foodmenu() {
                                 </div>
                             </div>
 
-                            <div className='w-1/2 aspect-square relative group overflow-hidden'>
+                            <div className='galaryItem w-1/2 aspect-square relative group overflow-hidden'>
                                 <img
                                     src='gallery-2s.jpg'
                                     alt='glaryImage'
@@ -34,7 +79,7 @@ export default function Foodmenu() {
                                 </div>
                             </div>
 
-                            <div className='w-1/2 aspect-square relative group overflow-hidden'>
+                            <div className='galaryItem w-1/2 aspect-square relative group overflow-hidden'>
                                 <img
                                     src='gallery-3s.jpg'
                                     alt='glaryImage'
@@ -46,7 +91,7 @@ export default function Foodmenu() {
                                 </div>
                             </div>
 
-                            <div className='w-1/2 aspect-square relative group overflow-hidden'>
+                            <div className='galaryItem w-1/2 aspect-square relative group overflow-hidden'>
                                 <img
                                     src='gallery-4s.jpg'
                                     alt='glaryImage'
@@ -59,11 +104,11 @@ export default function Foodmenu() {
                             </div>
                         </div>
                         {/* ---==from the menu==---- */}
-                        <div className='w-full lg:w-1/2 max-w-3xl h-full'>
+                        <div ref={menuListRef} className='w-full lg:w-1/2 max-w-3xl h-full'>
                             {/* ----heading---- */}
                             <div>
-                                <h3 className='text-6xl font-tangerine text-amber-600'><b>From the menu</b></h3>
-                                <h2 className='text-4xl'>Special offers</h2>
+                                <h3 className='menuHeading text-6xl font-tangerine text-amber-600'><b>From the menu</b></h3>
+                                <h2 className='menuHeading text-4xl'>Special offers</h2>
                             </div>
                             {/* ----menu list---- */}
                             <ul className='pt-8 w-full flex flex-col gap-5'>
@@ -85,7 +130,7 @@ export default function Foodmenu() {
                                 <li className='flex justify-between gap-8 items-center'>
                                     <div className='flex items-center gap-5'>
                                         <div className='w-24 h-24 bg-amber-600 rounded-full shrink-0'>
-                                            
+
                                         </div>
                                         <div>
                                             <h4 className='text-xl mb-2'>Royal lunch</h4>

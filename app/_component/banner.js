@@ -87,13 +87,54 @@ export default function Banner() {
     const targetX = normX * maxMove;
     const targetY = normY * maxMove;
 
-    flotingImages.forEach((image, i) => {
-      gsap.to(image, {
-        x: targetX * 1.1,
-        y: targetY * 1.1,
+    // flotingImages.forEach((image, i) => {
+    //   gsap.to(image, {
+    //     x: targetX * 1.1,
+    //     y: targetY * 1.1,
+    //     duration: 0.6, ease: "power3.out",
+    //   });
+    // });
+    gsap.to(flotingImages[0], {
+        x: targetX * 0.2,
+        y: targetY * 0.2,
         duration: 0.6, ease: "power3.out",
       });
-    });
+      gsap.to(flotingImages[1], {
+        x: targetX * 0.4,
+        y: targetY * 0.4,
+        duration: 0.6, ease: "power3.out",
+      });
+      gsap.to(flotingImages[2], {
+        x: targetX * 0.1,
+        y: targetY * 0.1,
+        duration: 0.6, ease: "power3.out",
+      });
+      gsap.to(flotingImages[3], {
+        x: targetX * 0.5,
+        y: targetY * 0.5,
+        duration: 0.6, ease: "power3.out",
+      });
+      gsap.to(flotingImages[4], {
+        x: targetX * 0.5,
+        y: targetY * 0.5,
+        duration: 0.6, ease: "power3.out",
+      });
+      gsap.to(flotingImages[5], {
+        x: -targetX * 0.2,
+        y: -targetY * 0.2,
+        duration: 0.6, ease: "power3.out",
+      });
+      gsap.to(flotingImages[6], {
+        x: targetX * 0.2,
+        y: targetY * 0.2,
+        duration: 0.6, ease: "power3.out",
+      });
+      gsap.to(flotingImages[7], {
+        x: targetX * 0.9,
+        y: targetY * 0.9,
+        duration: 0.6, ease: "power3.out",
+      });
+
   };
 
 
@@ -141,7 +182,7 @@ export default function Banner() {
               />
             </aside>
             {/* ===centerdiv=== */}
-            <div className='w-4/8 h-full flex items-center justify-center relative' >
+            <div className='w-full lg:w-4/8 h-full flex items-center justify-center relative' >
               <div className='w-full max-w-xl h-96 absolute md:static text-white text-center z-50'>
                 <h2 ref={titleRef} className='text-5xl text-amber-500 font-tangerine'> <b>Discover</b></h2>
                 <h1 ref={headingRef} className='text-7xl font-tangerine'>Meal Deal</h1>
@@ -186,7 +227,7 @@ export default function Banner() {
               />
               <img
                 src='/slide01-08.png'
-                className='flotingImage w-1/3 h-4/5 object-contain absolute top-24 lg:top-44 left-0'
+                className='flotingImage w-1/3 h-4/5 object-contain absolute top-24 lg:top-64 left-0'
               />
               <img
                 src='/slide01-09.png'
